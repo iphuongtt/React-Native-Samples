@@ -5,6 +5,7 @@ import {
   Image,
   StyleSheet,
   useWindowDimensions,
+  NativeModules,
 } from 'react-native';
 import {DemoButton, DemoResponse} from '../components/ui';
 import * as ImagePicker from 'react-native-image-picker';
@@ -12,6 +13,8 @@ import {ImagePickerResponse} from 'react-native-image-picker/src/types';
 
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList} from '@types';
+
+const {TextRecognitionModule} = NativeModules;
 
 type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
 type HomeScreenRouteProp = RouteProp<RootStackParamList, 'Home'>;
@@ -51,6 +54,15 @@ export const HomeScreen = (props: Props) => {
         <View style={{flexDirection: 'row', paddingBottom: 8}}>
           <DemoButton key="Process Image" onPress={onProcessImage}>
             {'Process Image'}
+          </DemoButton>
+        </View>
+        <View style={{flexDirection: 'row', paddingVertical: 8}}>
+          <DemoButton
+            key="Test Native Module"
+            onPress={() => {
+              TextRecognitionModule.recognizeImage('Test Name');
+            }}>
+            {'Test Native Module'}
           </DemoButton>
         </View>
         <View style={{flexDirection: 'row', paddingVertical: 8}}>

@@ -11,7 +11,9 @@ target 'demoMLKit' do
     # to enable hermes on iOS, change `false` to `true` and then install pods
     :hermes_enabled => false
   )
-
+  
+  pod 'GoogleMLKit/TextRecognition','2.2.0'
+  
   target 'demoMLKitTests' do
     inherit! :complete
     # Pods for testing

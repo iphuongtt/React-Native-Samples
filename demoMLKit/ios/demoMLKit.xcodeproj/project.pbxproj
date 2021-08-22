@@ -11,6 +11,8 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		38D0DA4026D0B29200480367 /* RCTMLKitModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D0DA3F26D0B29200480367 /* RCTMLKitModule.m */; };
+		38D0DA4526D15FFF00480367 /* RCTTextRecognitionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D0DA4426D15FFF00480367 /* RCTTextRecognitionModule.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		946789054392054CA0D7DFE5 /* libPods-demoMLKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECAF89B46D9DA96CB0C5988 /* libPods-demoMLKit.a */; };
 		D4958A7031AB1C314AB7CCFE /* libPods-demoMLKit-demoMLKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 811E0C07C44736D615C73199 /* libPods-demoMLKit-demoMLKitTests.a */; };
@@ -37,6 +39,10 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = demoMLKit/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = demoMLKit/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = demoMLKit/main.m; sourceTree = "<group>"; };
+		38D0DA3E26D0B12E00480367 /* RCTMLKitModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTMLKitModule.h; sourceTree = "<group>"; };
+		38D0DA3F26D0B29200480367 /* RCTMLKitModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTMLKitModule.m; sourceTree = "<group>"; };
+		38D0DA4326D15F6A00480367 /* RCTTextRecognitionModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTTextRecognitionModule.h; sourceTree = "<group>"; };
+		38D0DA4426D15FFF00480367 /* RCTTextRecognitionModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTTextRecognitionModule.m; sourceTree = "<group>"; };
 		3E491DAA293AAD5C6B4750B1 /* Pods-demoMLKit-demoMLKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demoMLKit-demoMLKitTests.debug.xcconfig"; path = "Target Support Files/Pods-demoMLKit-demoMLKitTests/Pods-demoMLKit-demoMLKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3ECAF89B46D9DA96CB0C5988 /* libPods-demoMLKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-demoMLKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		811E0C07C44736D615C73199 /* libPods-demoMLKit-demoMLKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-demoMLKit-demoMLKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,12 +92,15 @@
 		13B07FAE1A68108700A75B9A /* demoMLKit */ = {
 			isa = PBXGroup;
 			children = (
+				38D0DA4226D15F0B00480367 /* MLKit */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				38D0DA3E26D0B12E00480367 /* RCTMLKitModule.h */,
+				38D0DA3F26D0B29200480367 /* RCTMLKitModule.m */,
 			);
 			name = demoMLKit;
 			sourceTree = "<group>";
@@ -104,6 +113,15 @@
 				811E0C07C44736D615C73199 /* libPods-demoMLKit-demoMLKitTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		38D0DA4226D15F0B00480367 /* MLKit */ = {
+			isa = PBXGroup;
+			children = (
+				38D0DA4326D15F6A00480367 /* RCTTextRecognitionModule.h */,
+				38D0DA4426D15FFF00480367 /* RCTTextRecognitionModule.m */,
+			);
+			name = MLKit;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -145,7 +163,6 @@
 				3E491DAA293AAD5C6B4750B1 /* Pods-demoMLKit-demoMLKitTests.debug.xcconfig */,
 				ED1C4C6D81C5F9F227858972 /* Pods-demoMLKit-demoMLKitTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -411,7 +428,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38D0DA4026D0B29200480367 /* RCTMLKitModule.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				38D0DA4526D15FFF00480367 /* RCTTextRecognitionModule.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,7 +580,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -626,7 +645,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
